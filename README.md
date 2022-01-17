@@ -2,12 +2,10 @@
 
 ## ⚙️  디렉터리 구조
 
----
 <img width="216" alt="스크린샷 2022-01-17 오후 8 46 18" src="https://user-images.githubusercontent.com/80299170/149775800-99c15032-0b27-49dc-8d00-36cbdcfab1ce.png">
+<img width="233" alt="스크린샷 2022-01-17 오후 8 47 18" src="https://user-images.githubusercontent.com/80299170/149777051-608806bf-9267-4e4e-a0e9-ceb9ee901469.png">
 
-
-
-⬅️  타임리프 레이아웃 라이브러리를 사용
+⬆️  타임리프 레이아웃 라이브러리를 사용
 
 **공통구성(header.html,nav.html,footer.html)**은
 
@@ -19,23 +17,7 @@
 
 ## 📝  사용된 언어
 
----
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bfb11997-df46-484a-99ee-38deee45541e/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c893df0c-014a-4fee-bfc9-b6df79ed73be/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/40be7437-b148-4898-ab1d-d29d03ca2fd3/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21d06781-a2d4-4d0c-b6ef-142528bff0c3/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80e96f3b-0fa3-4685-a949-e06deaf58afe/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a844d8d-a7b2-4204-9de6-4e6cb772d914/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a7a675f-ab42-4aaa-8cbd-def880bb9f22/Untitled.png)
-
----
+<img width="1187" alt="스크린샷 2022-01-17 오후 10 23 06" src="https://user-images.githubusercontent.com/80299170/149777400-7c23ff7f-9aca-4447-9440-6df046f9a058.png">
 
 # 📌  진행하며 부딪힌 부분들
 
@@ -53,8 +35,6 @@
 5. **세션을 통한 로그인 기능 구현**
     - 세션을 이해하고 구현해보는 과정에서 어려움을 느끼었다.
 
----
-
 # 📎  배운점
 
 1. JPA 영속성 컨텍스트와 변경 감지를 이해
@@ -64,24 +44,14 @@
 5. HTML,CSS,Thymeleaf을 사용하며 HTTP에 대한 지식을 쌓음
 6. 쿠키와 세션 그리고 Spring Security, JWT ,OAUTH에 생태계를 알 수 있었다.
 
----
-
 # 📚  아쉬웠던 점
-
----
-
 1. 퀄리티 떨어지는 웹디자인
 2. 자바스크립트를 사용하지 않음
 3. 페이징 처리에 대한 확실한 이해
 4. 검색 기능구현 한계
 5. 테스트코드를 진행해보지 않은 것
 
----
-
 # ❕느낀점
-
----
-
 백엔드를 공부하지만 프로젝트를 하며 프론트에 투자한 시간이 더 많은거 같다..ㅋㅋㅋ 내가 프론트에 너무 무지했구나 생각이 들었다. 그리고
 
 아직 너무나 부족한 코딩실력이라는것에 벽을 느꼇다. 이번 간단한 예제를 통해 나의 부족함을 인정하고 더욱 더 배워야겠다고 생각했다.
