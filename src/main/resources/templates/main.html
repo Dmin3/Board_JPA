@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<!--<th:block layout:fragment="css" >
+    <link rel="stylesheet" th:href="@{css/test}">
+</th:block>-->
+<th:block layout:fragment="js">
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"></script>
+</th:block>
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{css/main.css}">
+    <link rel="stylesheet" th:href="@{css/header.css}">
+</th:block>
+
+
+<div layout:fragment="content">
+    <div class="container"
+         th:style="'background-image:url(' + @{/image/park.png} + '); background-repeat: no-repeat, repeat; background-size: cover;'">
+        <div class="parent"><div class="child">
+            회원가입 후 <br>
+            게시판을 등록해보세요!
+
+        </div>
+
+    </div>
+
+        <a th:href="@{/home}" class="fadeIn">View More</a>
+</div>
+
+
+</html>

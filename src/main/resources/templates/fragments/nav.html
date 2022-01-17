@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<nav th:fragment="navFragment">
+    <div class="navLayout">
+        <nav>
+            <a class="navTag" th:href="@{/home}">전체보기</a>
+            <a class="navTag" th:href="@{/boardRegister}">게시판등록</a>
+            <a class="navTag" th:href="@{/join}">회원가입</a>
+<!--            <a class="navTag" href="">수원</a>-->
+<!--            <a class="navTag" href="">시흥</a>-->
+            <a class="LoginNav" th:href="@{/login}">로그인</a>
+        </nav>
+    </div>
+</nav>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<!--<th:block layout:fragment="css" >
+    <link rel="stylesheet" th:href="@{css/test}">
+</th:block>-->
+<th:block layout:fragment="js">
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"></script>
+</th:block>
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</th:block>
+
+<th:block layout:fragment="nav">
+    <nav th:replace="fragments/nav :: navFragment"></nav>
+</th:block>
+
+<div layout:fragment="content">
+        <div class="container">
+            <table class="content-table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>제목</th>
+                    <th>업로드시</th>
+                    <th>작성자</th>
+                </tr>
+                </thead>
+                <tbody class="content-tbody">
+                <tr th:each="board : ${boardList}">
+                    <td th:text="${board.id}"></td>
+                    <td><a th:text="${board.title}" class="table-a" th:href="@{/board/{id} (id=${board.id})}"></a></td>
+                    <td th:text="${board.getUpdateDate()}"></td>
+                    <td th:text="${board.member.memberIdName}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!--페이징 처리-->
+            <ul>
+                <li class="page" th:each="i : ${#numbers.sequence(startPage, endPage)}">
+                    <a class="page-button" th:href="@{/home(page=${i - 1})}" th:text="${i}">1</a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+
+
+
+</div>
+
+</html>

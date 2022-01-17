@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<!--<th:block layout:fragment="css" >
+    <link rel="stylesheet" th:href="@{css/test}">
+</th:block>-->
+<th:block layout:fragment="js">
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"></script>
+</th:block>
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</th:block>
+
+<th:block layout:fragment="nav">
+    <nav th:replace="fragments/nav :: navFragment"></nav>
+</th:block>
+
+<div layout:fragment="content">
+    <div class="container">
+<!--        <img class="board-img" th:src="@{/files/} + ${findBoard.fileName}">-->
+        <div class="board-Explanation">
+            <h2 th:text="${board.title}"></h2>
+            <p th:text="${board.content}"></p>
+
+            <div class="board-button">
+                <a th:href="@{/board/{id}/edit (id=${board.id})}">수정</a>
+                <a th:href="@{/board/{id}/delete (id=${board.id})}">삭제</a>
+            </div>
+            <div class="board-createTime" th:text="'업로드 :' + ${board.getUpdateDate()}"></div>
+        </div>
+    </div>
+</div>
+
+</html>

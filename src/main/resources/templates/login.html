@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<!--<th:block layout:fragment="css" >
+    <link rel="stylesheet" th:href="@{css/test}">
+</th:block>-->
+<th:block layout:fragment="js">
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"></script>
+</th:block>
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/join.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</th:block>
+
+<th:block layout:fragment="nav">
+    <nav th:replace="fragments/nav :: navFragment"></nav>
+</th:block>
+
+<div layout:fragment="content">
+    <div class="container">
+        <form th:action="@{/login}" th:object="${loginInfo}" method="post">
+            <div class="group-form">
+                <input type="text" th:field="*{memberIdName}" placeholder="아이디를 입력해주세요">
+            </div>
+            <div class="group-form">
+                <input class="input2" type="password" th:field="*{password}" placeholder="비밀번호를 입력주세요!">
+            </div>
+
+            <input class="input" type="submit" value="로그인">
+        </form>
+
+    </div>
+</div>
+
+</html>

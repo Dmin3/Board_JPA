@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<!--<th:block layout:fragment="css" >
+    <link rel="stylesheet" th:href="@{css/test}">
+</th:block>-->
+<th:block layout:fragment="js">
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"></script>
+</th:block>
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/boardRegister.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</th:block>
+
+<th:block layout:fragment="nav">
+    <nav th:replace="fragments/nav :: navFragment"></nav>
+</th:block>
+
+<div layout:fragment="content">
+    <div class="container">
+        <form th:action="@{/boardRegister}" th:object="${board}" method="post">
+            <div class="group-form">
+                <input type="text" th:field="*{title}" placeholder="제목을 등록해주세요!!">
+            </div>
+            <div class="group-form">
+                <textarea type="text" th:field="*{content}" placeholder="내용을 적어주세요!!"></textarea>
+            </div>
+            <!--<div class="group-form">
+                <select th:field="*{city}" th:value="*{city}">
+                    <option th:text="안산" th:value="Ansan"></option>
+                    <option th:text="시흥" th:value="Siheung"></option>
+                    <option th:text="화성" th:value="Mars"></option>
+                    <option th:text="수원" th:value="Suwon"></option>
+                </select>
+            </div>-->
+<!--            <div class="group-form">-->
+<!--                <input class="input2" type="file" th:field="*{file}" placeholder="이미지를 업로드해주세요!!">-->
+<!--            </div>-->
+            <input class="input" type="submit" value="게시판 등록">
+        </form>
+
+    </div>
+</div>
+
+</html>
