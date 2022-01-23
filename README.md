@@ -41,7 +41,7 @@
 2. 예제이지만 Setter, 생성자가 아닌 @Builder을 통해 객체를 관리
 3. Spring에 전반적인 지식과 MVC패턴을 이해
 4. 스프링JPA에 전반적인 지식
-5. HTML,CSS,Thymeleaf을 사용하며 HTTP에 대한 지식을 쌓음
+5. HTML,CSS,Thymeleaf을 사용하며 Front에 대한 지식을 쌓음
 6. 쿠키와 세션 그리고 Spring Security, JWT ,OAUTH에 생태계를 알 수 있었다.
 
 # 📚  아쉬웠던 점
